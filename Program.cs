@@ -16,9 +16,9 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/", () => "Hello World");
 //app.UseHttpsRedirection();
 
-app.MapPost("/login", (LoginADM LoginADM) =>
+app.MapPost("/login", (MinimaApi.DTO.LoginDTO LoginDTO) =>
 {
-    if (LoginADM.Email == "adm@exemplo.com" && LoginADM.Pasworld == "12345")
+    if (LoginDTO.Email == "adm@exemplo.com" && LoginDTO.Pasworld == "12345")
     {
         return Results.Ok("Login efetuado com sucesso!");
     }
@@ -34,9 +34,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-public class LoginADM
-{
-    public string Email { get; set; } = default!;
-    public string Pasworld { get; set; } = default!;
-
-}
