@@ -1,4 +1,4 @@
-//@injet Program.cs
+
 @Projeto_API_WEB_ASP_.NET_HostAddress = http://localhost:5114
 GET {{Projeto_API_WEB_ASP_.NET_HostAddress}}/weatherforecast/
 Accept: application/json
